@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.util.concurrent.atomic.AtomicLong
 
-// --- Data -------------------------------------------------------
+// --- Data --------------------------------------------------------
 
 data class Greeting(val id: Long, val content: String)
 
-// --- Controller -------------------------------------------------
+// --- Controller --------------------------------------------------
 
 @RestController
 class GreetingController
@@ -19,14 +19,13 @@ class GreetingController
   val counter = AtomicLong()
 
   @GetMapping("/greeting")
-  fun greeting(@RequestParam(
-                 value = "name", defaultValue = "World")
+  fun greeting(@RequestParam(value = "name", defaultValue = "World")
                name: String) =
     Greeting(counter.incrementAndGet(), "Hello, $name")
 
 }
 
-// --- Main -------------------------------------------------------
+// --- Main --------------------------------------------------------
 
 @SpringBootApplication
 class Application
@@ -36,4 +35,4 @@ fun main(args: Array<String>)ld
   SpringApplication.run(Application::class.java, *args)
 }
 
-// ----------------------------------------------------------------
+// -----------------------------------------------------------------
