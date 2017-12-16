@@ -21,7 +21,7 @@ jar {
 }
 
 springBoot {
-    mainClass = 'org.jetbrains.kotlin.demo.ApplicationKt'
+    mainClass = 'org.tilient.demo.ApplicationKt'
 }
 
 repositories {
