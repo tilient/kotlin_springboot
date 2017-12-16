@@ -22,7 +22,6 @@ class GreetingController
   fun greeting(@RequestParam(value = "name", defaultValue = "World")
                name: String) =
     Greeting(counter.incrementAndGet(), "Hello, $name")
-
 }
 
 // --- Main --------------------------------------------------------
@@ -34,5 +33,3 @@ fun main(args: Array<String>)
 {
   SpringApplication.run(Application::class.java, *args)
 }
-
-// -----------------------------------------------------------------
